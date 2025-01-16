@@ -58,8 +58,8 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'docker') {
-                        sh "docker tag zomato Sangamvirat/zomato:latest "
-                        sh "docker push Sangamvirat/zomato:latest "
+                        sh "docker tag zomato sangamvirat/zomato:latest "
+                        sh "docker push sangamvirat/zomato:latest "
                     }
                 }
             }
@@ -100,7 +100,7 @@ pipeline {
                 </body>
                 </html>
             """,
-            to: 'kastrokiran@gmail.com',
+            to: 'mnsangamesh0@gmail.com',
             mimeType: 'text/html',
             attachmentsPattern: 'trivy.txt'
         }
